@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MERAPI ASH RUN — Volcano Survey Flight</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #0a1826; height: 100%; overflow: hidden; }
+  #stage { position: relative; width: 1280px; height: 720px; margin: 0 auto; }
+  #gl, #hud { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; display: block; }
+  #hud { pointer-events: none; }
+  @media (max-width: 1300px) {
+    #stage { transform-origin: top center; }
+  }
+</style>
+<script type="importmap">
+  { "imports": { "three": "./vendor/three.module.min.js" } }
+</script>
+</head>
+<body>
+<div id="stage">
+  <canvas id="gl" width="1280" height="720"></canvas>
+  <canvas id="hud" width="1280" height="720"></canvas>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
